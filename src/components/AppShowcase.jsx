@@ -1,31 +1,53 @@
-import { motion } from "framer-motion";
-import { House, Lightbulb, Clock3, ShieldCheck, Layers3 } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowLeft, ArrowRight, Smartphone } from "lucide-react";
+
+const screenshots = [
+  { src: "/images/app/01-splash.jpg", title: "A premium first impression", label: "SPLASH SCREEN", description: "The SmartHomeX identity, with the black-and-gold visual language used throughout the app." },
+  { src: "/images/app/02-app-lock.jpg", title: "A personal layer of security", label: "APP LOCK", description: "A dedicated four-digit PIN screen for the app-lock experience." },
+  { src: "/images/app/03-sign-in.jpg", title: "Your account, in one place", label: "SIGN IN", description: "A sign-in interface with account creation and password recovery entry points." },
+  { src: "/images/app/04-home-dashboard.jpg", title: "A view of your smart home", label: "HOME DASHBOARD", description: "Review homes, rooms, and the device connection overview from the dashboard." },
+  { src: "/images/app/05-home-rooms.jpg", title: "Organise spaces your way", label: "ROOMS", description: "A room list with options to add rooms and pair compatible ESP32 devices." },
+  { src: "/images/app/06-device-controls.jpg", title: "Device controls and automation", label: "DEVICE CONTROLS", description: "A device screen showing relay controls alongside timers and schedules." }
+];
 
 export default function AppShowcase() {
+  const [active, setActive] = useState(3);
+  const current = screenshots[active];
+  const change = (direction) => setActive((index) => (index + direction + screenshots.length) % screenshots.length);
   return (
-    <section className="section showcase">
-      <div className="showcase-grid">
-        <motion.div className="phone-scene" initial={{ opacity: 0, x: -25 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: .6 }}>
-          <div className="phone">
-            <div className="phone-notch" />
-            <div className="phone-top"><span>SmartHomeX</span><span className="avatar">X</span></div>
-            <div className="phone-greeting">Your space,</div><h3>your rules.</h3>
-            <div className="phone-room">
-              <div className="room-title"><House size={19} /><b>Living Room</b></div>
-              <span className="room-label">ILLUSTRATIVE DEVICE CONTROL</span>
-              {[["Light 01", true], ["Light 02", false]].map(([label, on]) => <div className="room-light" key={label}><span className="light-circle"><Lightbulb size={20} /></span><span><b>{label}</b><small>Relay channel</small></span><span className={on ? "switch-demo" : "switch-demo switch-off"} /></div>)}
-            </div>
-            <div className="phone-bottom"><House size={18} /><Layers3 size={18} /><Clock3 size={18} /><ShieldCheck size={18} /></div>
+    <section className="section showcase" id="app-showcase">
+      <div className="showcase-heading">
+        <span className="eyebrow">THE REAL APP EXPERIENCE</span>
+        <h2>Meet the app behind <span className="gold-text">smarter living.</span></h2>
+        <p>Explore actual SmartHomeX screens, from secure sign-in to room and device controls.</p>
+      </div>
+      <div className="real-showcase">
+        <motion.div className="real-phone-wrap" initial={{ opacity: 0, x: -28 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.15 }} transition={{ duration: 0.6 }}>
+          <div className="real-phone-glow" />
+          <div className="real-phone">
+            <div className="real-phone-speaker" />
+            <AnimatePresence mode="wait">
+              <motion.img key={current.src} src={current.src} alt={`SmartHomeX ${current.label.toLowerCase()} screenshot`} className="real-phone-image" initial={{ opacity: 0, scale: 0.985 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.985 }} transition={{ duration: 0.22 }} />
+            </AnimatePresence>
           </div>
-          <div className="phone-decoration decoration-one" /><div className="phone-decoration decoration-two" />
+          <div className="real-phone-caption"><Smartphone size={15} /> ACTUAL SMART HOMEX APP SCREEN</div>
         </motion.div>
-        <div className="showcase-copy">
-          <span className="eyebrow">DESIGNED FOR EVERYDAY LIVING</span>
-          <h2>Control made<br /><span className="gold-text">beautifully simple.</span></h2>
-          <p>SmartHomeX brings connected-home controls into one considered mobile experience. The interface aims to make device management easier without unnecessary complexity.</p>
-          <ul className="check-list"><li><span>✓</span>A focused device-control interface</li><li><span>✓</span>Designed for multi-channel relay control</li><li><span>✓</span>A foundation for future smart-home features</li></ul>
-          <a className="text-link" href="#download">Discover SmartHomeX →</a>
-          <p className="small-note">Illustrative app preview, not a live connection. Actual screens and available features may vary by release.</p>
+        <div className="real-showcase-copy">
+          <span className="real-screen-count">SCREEN {String(active + 1).padStart(2, "0")} / {String(screenshots.length).padStart(2, "0")}</span>
+          <AnimatePresence mode="wait">
+            <motion.div key={current.title} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} transition={{ duration: 0.2 }}>
+              <span className="eyebrow">{current.label}</span><h3>{current.title}</h3><p>{current.description}</p>
+            </motion.div>
+          </AnimatePresence>
+          <div className="showcase-controls">
+            <button className="showcase-arrow" onClick={() => change(-1)} aria-label="Previous app screenshot"><ArrowLeft size={19} /></button>
+            <button className="showcase-arrow" onClick={() => change(1)} aria-label="Next app screenshot"><ArrowRight size={19} /></button>
+          </div>
+          <div className="showcase-thumbnails" aria-label="Choose app screenshot">
+            {screenshots.map((screen, index) => <button key={screen.src} className={active === index ? "showcase-thumb active" : "showcase-thumb"} onClick={() => setActive(index)} aria-label={`Show ${screen.label}`} aria-pressed={active === index}><img src={screen.src} alt="" /></button>)}
+          </div>
+          <p className="small-note">Screenshots supplied for the SmartHomeX website. Device status and features shown reflect the captured moment and may change in use.</p>
         </div>
       </div>
     </section>

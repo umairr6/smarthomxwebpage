@@ -3,7 +3,20 @@ import { ArrowRight, Lightbulb, Wifi, House, Zap } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="hero" id="home">
+    <section className="hero hero-video-background" id="home">
+      <video
+        className="hero-background-video"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        aria-hidden="true"
+        poster="/images/app/04-home-dashboard.jpg"
+      >
+        <source src="/videos/smarthomex_intro.mp4" type="video/mp4" />
+      </video>
+      <div className="hero-video-overlay" />
       <div className="hero-glow" />
       <div className="hero-content">
         <motion.div className="status-pill" initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .6 }}>

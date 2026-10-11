@@ -1,0 +1,21 @@
+SmartHomeX company-details update
+================================
+Files changed:
+- src/components/About.jsx: founder profile and project details
+- src/components/Support.jsx: new support section, WhatsApp contact and email placeholders
+- src/components/Footer.jsx: updated navigation/contact/company details
+- src/App.jsx: imports and displays Support section
+- src/index.css: added responsive styling for new sections
+
+Provided details used:
+Founder: Umair Farooq
+Title: Founder & Developer
+Brand: SmartHomeX
+Status: project in development
+Location: Sopore, Jammu & Kashmir, India
+Description: Smart-home automation, mobile app control and connected-home technology
+Website: https://umairr6.github.io/smarthomxwebpage/
+Phone/WhatsApp: +91 70067 51681
+
+No official email address or company registration information was supplied, so none was invented.
+WhatsApp link assumes the provided Indian phone number is WhatsApp-enabled.
