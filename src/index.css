@@ -90,13 +90,7 @@
 
 
 /* SmartHomeX intro video background */
-.hero-video-background{isolation:isolate;overflow:hidden;background:#090a0d}
-.hero-background-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:-2;opacity:.48;pointer-events:none}
-.hero-video-overlay{position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(8,9,12,.96) 0%,rgba(8,9,12,.82) 43%,rgba(8,9,12,.48) 100%),linear-gradient(0deg,#090a0d 0%,transparent 38%,rgba(8,9,12,.25) 100%)}
-.hero-video-background .hero-content,.hero-video-background .hero-visual,.hero-video-background .scroll-cue{z-index:1}
-.hero-video-background .hero-glow{z-index:0}
-@media(max-width:760px){.hero-background-video{opacity:.35;object-position:center}.hero-video-overlay{background:linear-gradient(180deg,rgba(8,9,12,.72),rgba(8,9,12,.78) 45%,#090a0d 100%)}}
-@media(prefers-reduced-motion:reduce){.hero-background-video{display:none}}
+
 
 
 /* Animated Android APK download call-to-action */
@@ -129,3 +123,17 @@
 /* Match iOS CTA to the Android gold button */
 .ios-download-cta{margin-top:12px}
 .download-copy .download-cta+.download-cta{margin-top:12px}
+
+
+/* One continuous SmartHomeX video background behind the entire website */
+.site-video-background{position:fixed;inset:0;z-index:-2;overflow:hidden;background:#090a0d;pointer-events:none}
+.site-video-background video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.27}
+.site-video-background::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(7,8,11,.78) 0%,rgba(7,8,11,.68) 30%,rgba(7,8,11,.82) 70%,rgba(7,8,11,.94) 100%),
+  linear-gradient(90deg,rgba(7,8,11,.65),rgba(7,8,11,.25) 50%,rgba(7,8,11,.65));}
+#root{position:relative;isolation:isolate;min-height:100vh;background:transparent}
+#root::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:rgba(8,9,12,.28)}
+main,.section,.hero,.download-section,.about-section,.support-section,.faq-section{background-color:transparent}
+.site-video-background video{will-change:auto}
+@media(max-width:760px){.site-video-background video{opacity:.20;object-position:center}.site-video-background::after{background:linear-gradient(180deg,rgba(7,8,11,.82),rgba(7,8,11,.78) 40%,rgba(7,8,11,.94) 100%)}}
+@media(prefers-reduced-motion:reduce){.site-video-background video{display:none}}
