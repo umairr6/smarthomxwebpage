@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, ArrowRight, Smartphone } from "lucide-react";
 
 const screenshots = [
-  { src: "/images/app/01-splash.jpg", title: "A premium first impression", label: "SPLASH SCREEN", description: "The SmartHomeX identity, with the black-and-gold visual language used throughout the app." },
-  { src: "/images/app/02-app-lock.jpg", title: "A personal layer of security", label: "APP LOCK", description: "A dedicated four-digit PIN screen for the app-lock experience." },
-  { src: "/images/app/03-sign-in.jpg", title: "Your account, in one place", label: "SIGN IN", description: "A sign-in interface with account creation and password recovery entry points." },
-  { src: "/images/app/04-home-dashboard.jpg", title: "A view of your smart home", label: "HOME DASHBOARD", description: "Review homes, rooms, and the device connection overview from the dashboard." },
-  { src: "/images/app/05-home-rooms.jpg", title: "Organise spaces your way", label: "ROOMS", description: "A room list with options to add rooms and pair compatible ESP32 devices." },
-  { src: "/images/app/06-device-controls.jpg", title: "Device controls and automation", label: "DEVICE CONTROLS", description: "A device screen showing relay controls alongside timers and schedules." }
+  { src: `${import.meta.env.BASE_URL}/images/app/01-splash.jpg`, title: "A premium first impression", label: "SPLASH SCREEN", description: "The SmartHomeX identity, with the black-and-gold visual language used throughout the app." },
+  { src: `${import.meta.env.BASE_URL}/images/app/02-app-lock.jpg`, title: "A personal layer of security", label: "APP LOCK", description: "A dedicated four-digit PIN screen for the app-lock experience." },
+  { src: `${import.meta.env.BASE_URL}/images/app/03-sign-in.jpg`, title: "Your account, in one place", label: "SIGN IN", description: "A sign-in interface with account creation and password recovery entry points." },
+  { src: `${import.meta.env.BASE_URL}/images/app/04-home-dashboard.jpg`, title: "A view of your smart home", label: "HOME DASHBOARD", description: "Review homes, rooms, and the device connection overview from the dashboard." },
+  { src: `${import.meta.env.BASE_URL}/images/app/05-home-rooms.jpg`, title: "Organise spaces your way", label: "ROOMS", description: "A room list with options to add rooms and pair compatible ESP32 devices." },
+  { src: `${import.meta.env.BASE_URL}/images/app/06-device-controls.jpg`, title: "Device controls and automation", label: "DEVICE CONTROLS", description: "A device screen showing relay controls alongside timers and schedules." }
 ];
 
 export default function AppShowcase() {
