@@ -10,7 +10,7 @@ export default function DownloadSection() {
           <p>Control your connected home from one simple app. Download SmartHomeX for Android and get started.</p>
           <a
             className="button button-gold download-cta"
-            href="/downloads/smarthomex.apk"
+            href={`${import.meta.env.BASE_URL}downloads/smarthomex.apk`}
             download="SmartHomeX.apk"
           >
             <span className="download-cta-icon"><Download size={20} /></span>
