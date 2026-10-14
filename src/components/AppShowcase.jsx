@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, ArrowRight, Smartphone } from "lucide-react";
 
 const screenshots = [
-  { src: `${import.meta.env.BASE_URL}/images/app/01-splash.jpg`, title: "A premium first impression", label: "SPLASH SCREEN", description: "The SmartHomeX identity, with the black-and-gold visual language used throughout the app." },
-  { src: `${import.meta.env.BASE_URL}/images/app/02-app-lock.jpg`, title: "A personal layer of security", label: "APP LOCK", description: "A dedicated four-digit PIN screen for the app-lock experience." },
-  { src: `${import.meta.env.BASE_URL}/images/app/03-sign-in.jpg`, title: "Your account, in one place", label: "SIGN IN", description: "A sign-in interface with account creation and password recovery entry points." },
-  { src: `${import.meta.env.BASE_URL}/images/app/04-home-dashboard.jpg`, title: "A view of your smart home", label: "HOME DASHBOARD", description: "Review homes, rooms, and the device connection overview from the dashboard." },
-  { src: `${import.meta.env.BASE_URL}/images/app/05-home-rooms.jpg`, title: "Organise spaces your way", label: "ROOMS", description: "A room list with options to add rooms and pair compatible ESP32 devices." },
-  { src: `${import.meta.env.BASE_URL}/images/app/06-device-controls.jpg`, title: "Device controls and automation", label: "DEVICE CONTROLS", description: "A device screen showing relay controls alongside timers and schedules." }
+  { src: `${import.meta.env.BASE_URL}images/app/01-splash.jpg`, title: "A premium first impression", label: "SPLASH SCREEN", description: "The SmartHomeX identity, with the black-and-gold visual language used throughout the app." },
+  { src: `${import.meta.env.BASE_URL}images/app/02-app-lock.jpg`, title: "A personal layer of security", label: "APP LOCK", description: "A dedicated four-digit PIN screen for the app-lock experience." },
+  { src: `${import.meta.env.BASE_URL}images/app/03-sign-in.jpg`, title: "Your account, in one place", label: "SIGN IN", description: "A sign-in interface with account creation and password recovery entry points." },
+  { src: `${import.meta.env.BASE_URL}images/app/04-home-dashboard.jpg`, title: "A view of your smart home", label: "HOME DASHBOARD", description: "Review homes, rooms, and the device connection overview from the dashboard." },
+  { src: `${import.meta.env.BASE_URL}images/app/05-home-rooms.jpg`, title: "Organise spaces your way", label: "ROOMS", description: "A room list designed to help organise supported spaces and devices." },
+  { src: `${import.meta.env.BASE_URL}images/app/06-device-controls.jpg`, title: "Device controls and automation", label: "DEVICE CONTROLS", description: "A device screen showing the controls available in this app view." }
 ];
 
 export default function AppShowcase() {
@@ -20,7 +20,7 @@ export default function AppShowcase() {
       <div className="showcase-heading">
         <span className="eyebrow">THE REAL APP EXPERIENCE</span>
         <h2>Meet the app behind <span className="gold-text">smarter living.</span></h2>
-        <p>Explore actual SmartHomeX screens, from secure sign-in to room and device controls.</p>
+        <p>Explore actual SmartHomeX screens, from sign-in to room and device controls.</p>
       </div>
       <div className="real-showcase">
         <motion.div className="real-phone-wrap" initial={{ opacity: 0, x: -28 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.15 }} transition={{ duration: 0.6 }}>

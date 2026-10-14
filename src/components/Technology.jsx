@@ -1,18 +1,8 @@
-import { Cpu, Wifi, Smartphone, ShieldCheck } from "lucide-react";
-
-const stack = [
-  { icon: Cpu, label: "HARDWARE", title: "ESP32", text: "Wi-Fi-enabled microcontroller hardware for connected relay control." },
-  { icon: Wifi, label: "COMMUNICATION", title: "MQTT", text: "Message-based communication between compatible devices and the app." },
-  { icon: Smartphone, label: "APPLICATION", title: "Flutter", text: "A cross-platform mobile application for connected-home control." },
-  { icon: ShieldCheck, label: "BACKEND", title: "Supabase", text: "Backend services for configured authentication and application data." },
+import { Smartphone, ClipboardCheck, Wrench, MessageCircle } from "lucide-react";
+const steps=[
+ {icon:ClipboardCheck,label:"STEP 01",title:"Discuss your needs",text:"Tell us which rooms and electrical circuits you want to control. We’ll discuss compatibility and the installation scope."},
+ {icon:Wrench,label:"STEP 02",title:"Plan and install",text:"The hardware, wiring and installation requirements are agreed before work begins. Mains electrical work should be handled by a qualified electrician."},
+ {icon:Smartphone,label:"STEP 03",title:"Set up the app",text:"Get help configuring the supported app experience and testing the agreed controls during handover."},
+ {icon:MessageCircle,label:"AFTER SETUP",title:"Get support",text:"Contact SmartHomeX for product questions, setup guidance and support with the agreed installation."}
 ];
-
-export default function Technology() {
-  return (
-    <section className="section technology" id="technology">
-      <div className="section-heading"><span className="eyebrow">UNDER THE HOOD</span><h2>Built with purpose.<br /><span className="gold-text">Designed to connect.</span></h2><p>Mobile software and connected hardware brought together in a modular architecture.</p></div>
-      <div className="tech-grid">{stack.map(({ icon: Icon, label, title, text }) => <article className="tech-card" key={title}><div className="tech-icon"><Icon size={25} /></div><span className="tech-label">{label}</span><h3>{title}</h3><p>{text}</p></article>)}</div>
-      <p className="tech-disclaimer">This describes the project's development stack. Capabilities depend on the implemented firmware, deployment and configuration.</p>
-    </section>
-  );
-}
+export default function Technology(){return <section className="section technology" id="technology"><div className="section-heading"><span className="eyebrow">FROM ENQUIRY TO EVERYDAY USE</span><h2>Smart-home control, <span className="gold-text">step by step.</span></h2><p>A clear process to understand your needs, confirm what is supported and plan the right installation.</p></div><div className="tech-grid">{steps.map(({icon:Icon,label,title,text})=><article className="tech-card" key={title}><div className="tech-icon"><Icon size={25}/></div><span className="tech-label">{label}</span><h3>{title}</h3><p>{text}</p></article>)}</div><p className="tech-disclaimer">Compatibility, package contents, installation availability and features are confirmed before an order. Never work on live electrical circuits.</p></section>; }

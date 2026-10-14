@@ -1,19 +1,21 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-
 const questions = [
-  { q: "What is SmartHomeX?", a: "SmartHomeX is a developing smart-home project focused on managing compatible connected devices through a mobile application and hardware." },
-  { q: "Which hardware does it use?", a: "The current project uses an ESP32 and a four-channel relay setup. Compatibility depends on the hardware and firmware configuration." },
-  { q: "Can I control my home from anywhere?", a: "Remote access depends on the deployed cloud services, broker, device firmware and app configuration. Verify the current release before relying on remote control." },
-  { q: "Where can I download the Android app?", a: "The public APK release has not been configured yet. A verified release file and download link will be added when ready." },
+{q:"What is SmartHomeX?",a:"SmartHomeX is a smart-home control solution in development, designed to help people control compatible home devices through a mobile app and an appropriately configured installation."},
+{q:"What is the proposed price?",a:"The proposed launch price is ₹3,499. This is not a final quotation. Contact us to confirm current availability, what is included, supported circuits, installation conditions and any additional charges."},
+{q:"What is included in the complete installed solution?",a:"The intended offer includes compatible control hardware, app setup and installation for the circuits agreed in advance. The written quotation should list the included hardware, number of circuits, installation work, travel, warranty and any exclusions before you confirm an order."},
+{q:"Which devices can SmartHomeX control?",a:"Compatibility depends on the appliance, electrical load, control hardware and installation. We cannot promise that every appliance is supported. Tell us what you want to control so compatibility can be reviewed before installation."},
+{q:"Can I control devices when I am away from home?",a:"Remote control depends on the final setup, internet connection and service availability. We will explain the access available for your installation; remote operation should not be assumed until it has been tested."},
+{q:"Will it work if Wi-Fi or the internet stops working?",a:"Behaviour during an outage depends on the installed configuration. Some controls or status updates may be unavailable when a required connection or service is down. We do not promise offline operation unless it has been verified for your setup."},
+{q:"Are timers and schedules available?",a:"Available features can vary by app release and installation. Please confirm the specific controls you need with us before ordering; planned features are not necessarily available in every version."},
+{q:"Can I download the Android app?",a:"An Android APK download is provided on this website. Only install it if you trust the source and understand Android may display a warning for apps installed outside the Play Store. If you are unsure, contact SmartHomeX before installing."},
+{q:"Is an iPhone app available?",a:"An iOS app is not currently available through this website. We will update the website if a verified iPhone release becomes available."},
+{q:"How does installation work?",a:"First, tell us which rooms and circuits you want to control. We will discuss compatibility and site requirements, then confirm the scope and price before arranging installation. App setup and testing should be completed as part of the agreed handover."},
+{q:"Can I install it myself?",a:"Mains electricity can cause serious injury, fire or death. Electrical wiring and installation must be handled or checked by a qualified electrician. Never work on live circuits, and do not rely on a mobile app as a substitute for proper electrical protection or manual controls."},
+{q:"What happens if a device does not respond?",a:"Check whether the phone and home connection are available, then restart only equipment you can safely access. Do not touch wiring or open electrical enclosures. Contact support and describe what happened; we can help you identify the next safe step."},
+{q:"Does SmartHomeX work in every home?",a:"Not necessarily. Suitability depends on the existing wiring, appliances, network conditions and installation requirements. We confirm compatibility and the scope of work before accepting an installation."},
+{q:"Is ₹3,499 the final amount?",a:"No. It is a proposed launch price. The final written quotation may depend on the number of circuits, hardware, wiring, enclosure, travel, site conditions and extra work. Please confirm the complete amount before proceeding."},
+{q:"How can I contact SmartHomeX?",a:"WhatsApp us at +91 70067 51681 or email mailbusiness1420@gmail.com for product enquiries, installation questions and support."},
+{q:"Who is behind SmartHomeX?",a:"SmartHomeX is an independent project in development led by Umair Farooq in Sopore, Jammu & Kashmir, India."}
 ];
-
-export default function FAQ() {
-  const [active, setActive] = useState(0);
-  return (
-    <section className="section faq" id="faq">
-      <div className="section-heading"><span className="eyebrow">GOOD TO KNOW</span><h2>Frequently asked questions</h2><p>Useful details about the SmartHomeX project.</p></div>
-      <div className="faq-list">{questions.map((item, i) => <div className="faq-item" key={item.q}><button className="faq-question" onClick={() => setActive(active === i ? -1 : i)} aria-expanded={active === i}>{item.q}<ChevronDown className={active === i ? "chevron active" : "chevron"} size={19} /></button>{active === i && <div className="faq-answer">{item.a}</div>}</div>)}</div>
-    </section>
-  );
-}
+export default function FAQ(){const [active,setActive]=useState(0);return <section className="section faq" id="faq"><div className="section-heading"><span className="eyebrow">HELP BEFORE YOU GET STARTED</span><h2>Frequently asked questions</h2><p>Clear answers about compatibility, installation, pricing, app availability and support.</p></div><div className="faq-list">{questions.map((item,i)=><div className="faq-item" key={item.q}><button className="faq-question" onClick={()=>setActive(active===i?-1:i)} aria-expanded={active===i}>{item.q}<ChevronDown className={active===i?"chevron active":"chevron"} size={19}/></button>{active===i&&<div className="faq-answer">{item.a}</div>}</div>)}</div></section>; }

@@ -10,7 +10,7 @@ import Support from "./components/Support.jsx";
 import FAQ from "./components/FAQ.jsx";
 import Footer from "./components/Footer.jsx";
 import LegalPage from "./pages/LegalPage.jsx";
-function SiteVideoBackground() { return <div className="site-video-background" aria-hidden="true"><video autoPlay muted loop playsInline preload="metadata" poster="/images/app/04-home-dashboard.jpg"><source src="/videos/smarthomex_intro.mp4" type="video/mp4" /></video></div>; }
+function SiteVideoBackground() { return <div className="site-video-background" aria-hidden="true"><video autoPlay muted loop playsInline preload="metadata" poster={`${import.meta.env.BASE_URL}images/app/04-home-dashboard.jpg`}><source src={`${import.meta.env.BASE_URL}videos/smarthomex_intro.mp4`} type="video/mp4" /></video></div>; }
 
 function HomePage() {
   return (

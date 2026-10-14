@@ -3,7 +3,7 @@ import { House, Menu, X, ArrowRight } from "lucide-react";
 
 const links = [
   ["Features", "#features"],
-  ["Technology", "#technology"],
+  ["How It Works", "#technology"],
   ["About", "#about"],
   ["FAQ", "#faq"],
 ];
