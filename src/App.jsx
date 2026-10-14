@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
+import PromoVideo from "./components/PromoVideo.jsx";
 import Features from "./components/Features.jsx";
 import AppShowcase from "./components/AppShowcase.jsx";
 import Technology from "./components/Technology.jsx";
@@ -18,6 +19,7 @@ function HomePage() {
       <Navbar />
       <main>
         <Hero />
+        <PromoVideo />
         <Features />
         <AppShowcase />
         <Technology />

@@ -145,3 +145,14 @@ main,.section,.hero,.download-section,.about-section,.support-section,.faq-secti
 .launch-price-panel small { color:var(--muted); font-size:12px; line-height:1.7; }
 .launch-price-panel a { width:fit-content; margin-top:5px; color:var(--gold); font-size:13px; font-weight:700; text-decoration:underline; text-underline-offset:4px; }
 .faq-answer { line-height:1.85; }
+
+
+/* Customer-facing SmartHomeX promotional video */
+.promo-video-section { position: relative; z-index: 1; }
+.promo-video-heading { max-width: 760px; margin: 0 auto 2.25rem; text-align: center; }
+.promo-video-heading h2 { margin: .7rem 0 1rem; }
+.promo-video-heading p { max-width: 650px; margin: 0 auto; line-height: 1.75; opacity: .82; }
+.promo-video-frame { max-width: 760px; margin: 0 auto; padding: 14px; border: 1px solid rgba(212,175,55,.28); border-radius: 22px; background: rgba(10,10,12,.82); box-shadow: 0 24px 80px rgba(0,0,0,.32); }
+.promo-video-frame video { display: block; width: 100%; max-height: 78vh; aspect-ratio: 9 / 16; object-fit: contain; border-radius: 14px; background: #050505; }
+.promo-video-caption { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 13px 8px 2px; font-size: .78rem; letter-spacing: .12em; opacity: .8; }
+@media (max-width: 600px) { .promo-video-frame { padding: 8px; border-radius: 16px; } .promo-video-frame video { max-height: 70vh; border-radius: 10px; } .promo-video-caption { font-size: .67rem; letter-spacing: .08em; } }
