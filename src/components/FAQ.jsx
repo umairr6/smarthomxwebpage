@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 const questions = [
 {q:"What is SmartHomeX?",a:"SmartHomeX is a smart-home control solution in development, designed to help people control compatible home devices through a mobile app and an appropriately configured installation."},
-{q:"What is the proposed price?",a:"The proposed launch price is ₹3,499. This is not a final quotation. Contact us to confirm current availability, what is included, supported circuits, installation conditions and any additional charges."},
+{q:"What is the proposed price?",a:"The proposed launch price is ₹3,999. This is not a final quotation. Contact us to confirm current availability, what is included, supported circuits, installation conditions and any additional charges."},
 {q:"What is included in the complete installed solution?",a:"The intended offer includes compatible control hardware, app setup and installation for the circuits agreed in advance. The written quotation should list the included hardware, number of circuits, installation work, travel, warranty and any exclusions before you confirm an order."},
 {q:"Which devices can SmartHomeX control?",a:"Compatibility depends on the appliance, electrical load, control hardware and installation. We cannot promise that every appliance is supported. Tell us what you want to control so compatibility can be reviewed before installation."},
 {q:"Can I control devices when I am away from home?",a:"Remote control depends on the final setup, internet connection and service availability. We will explain the access available for your installation; remote operation should not be assumed until it has been tested."},
@@ -14,7 +14,7 @@ const questions = [
 {q:"Can I install it myself?",a:"Mains electricity can cause serious injury, fire or death. Electrical wiring and installation must be handled or checked by a qualified electrician. Never work on live circuits, and do not rely on a mobile app as a substitute for proper electrical protection or manual controls."},
 {q:"What happens if a device does not respond?",a:"Check whether the phone and home connection are available, then restart only equipment you can safely access. Do not touch wiring or open electrical enclosures. Contact support and describe what happened; we can help you identify the next safe step."},
 {q:"Does SmartHomeX work in every home?",a:"Not necessarily. Suitability depends on the existing wiring, appliances, network conditions and installation requirements. We confirm compatibility and the scope of work before accepting an installation."},
-{q:"Is ₹3,499 the final amount?",a:"No. It is a proposed launch price. The final written quotation may depend on the number of circuits, hardware, wiring, enclosure, travel, site conditions and extra work. Please confirm the complete amount before proceeding."},
+{q:"Is ₹3,999 the final amount?",a:"No. It is a proposed launch price. The final written quotation may depend on the number of circuits, hardware, wiring, enclosure, travel, site conditions and extra work. Please confirm the complete amount before proceeding."},
 {q:"How can I contact SmartHomeX?",a:"WhatsApp us at +91 70067 51681 or email mailbusiness1420@gmail.com for product enquiries, installation questions and support."},
 {q:"Who is behind SmartHomeX?",a:"SmartHomeX is an independent project in development led by Umair Farooq in Sopore, Jammu & Kashmir, India."}
 ];
