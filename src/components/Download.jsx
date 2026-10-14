@@ -8,7 +8,7 @@ export default function DownloadSection() {
           <span className="eyebrow">YOUR SMART HOME STARTS HERE</span>
           <h2>Meet your next<br /><span className="gold-gradient">connected experience.</span></h2>
           <p>SmartHomeX is being prepared as a complete installed smart-home solution for agreed circuits. We confirm compatible devices, included work and available app features before an order.</p>
-          <div className="launch-price-panel"><span className="launch-price-label">PROPOSED LAUNCH PRICE</span><strong>₹3,999</strong><small>Complete installed solution · subject to confirmed scope and site requirements</small><a href="mailto:mailbusiness1420@gmail.com?subject=SmartHomeX%20installation%20quote">Ask for an installation quote</a></div>
+          <div className="launch-price-panel"><span className="launch-price-label">PROPOSED LAUNCH PRICE</span><strong>₹3,499</strong><small>Complete installed solution · subject to confirmed scope and site requirements</small><a href="mailto:mailbusiness1420@gmail.com?subject=SmartHomeX%20installation%20quote">Ask for an installation quote</a></div>
           <a
             className="button button-gold download-cta"
             href={`${import.meta.env.BASE_URL}downloads/smarthomex.apk`}
