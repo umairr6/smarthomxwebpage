@@ -6,6 +6,7 @@ const links = [
   ["How It Works", "#technology"],
   ["About", "#about"],
   ["FAQ", "#faq"],
+  ["Work With Me", `${import.meta.env.BASE_URL}work-with-me`],
 ];
 
 export default function Navbar() {
