@@ -138,12 +138,17 @@ main,.section,.hero,.download-section,.about-section,.support-section,.faq-secti
 @media(max-width:760px){.site-video-background video{opacity:.20;object-position:center}.site-video-background::after{background:linear-gradient(180deg,rgba(7,8,11,.82),rgba(7,8,11,.78) 40%,rgba(7,8,11,.94) 100%)}}
 @media(prefers-reduced-motion:reduce){.site-video-background video{display:none}}
 
-/* Launch price panel */
-.launch-price-panel { margin:24px 0 20px; padding:19px 20px; border:1px solid rgba(215,181,109,.42); border-radius:12px; background:rgba(12,13,17,.78); display:grid; gap:8px; max-width:420px; }
-.launch-price-label { color:var(--gold); font-size:10px; font-weight:700; letter-spacing:1.8px; }
-.launch-price-panel strong { font:800 38px/1.1 Manrope,sans-serif; letter-spacing:-1px; }
-.launch-price-panel small { color:var(--muted); font-size:12px; line-height:1.7; }
-.launch-price-panel a { width:fit-content; margin-top:5px; color:var(--gold); font-size:13px; font-weight:700; text-decoration:underline; text-underline-offset:4px; }
+/* Floating money/coin animation: decorative only, no displayed price */
+.money-animation{position:relative;display:flex;align-items:center;gap:12px;min-height:112px;max-width:420px;margin:20px 0 14px;padding:12px 18px;border:1px solid rgba(215,181,109,.28);border-radius:16px;background:linear-gradient(110deg,rgba(215,181,109,.08),rgba(12,13,17,.48));overflow:hidden}
+.coin{position:absolute;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;border:1px solid #f0d58a;color:#f5d989;background:radial-gradient(circle at 30% 25%,#66512a,#19170f);font-weight:800;box-shadow:0 4px 16px #0005;animation:coin-float 3.8s ease-in-out infinite}
+.coin-one{right:28px;top:13px;animation-delay:0s}.coin-two{right:75px;top:37px;animation-delay:.8s}.coin-three{right:40px;bottom:10px;animation-delay:1.5s}
+.coin-stack{display:grid;place-items:center;color:var(--gold);animation:coin-glow 2.8s ease-in-out infinite}
+.money-caption{max-width:190px;color:var(--text);font-size:13px;font-weight:700;line-height:1.6;letter-spacing:.2px}
+.enquiry-cta{margin:2px 0 14px}
+@keyframes coin-float{0%,100%{transform:translateY(0) rotateY(0deg)}50%{transform:translateY(-12px) rotateY(180deg)}}
+@keyframes coin-glow{0%,100%{transform:translateY(0);filter:drop-shadow(0 0 0 rgba(215,181,109,0))}50%{transform:translateY(-5px);filter:drop-shadow(0 0 9px rgba(215,181,109,.45))}}
+@media(prefers-reduced-motion:reduce){.coin,.coin-stack{animation:none}}
+
 .faq-answer { line-height:1.85; }
 
 
